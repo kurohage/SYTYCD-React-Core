@@ -27,6 +27,7 @@ class AuthorDetail extends Component {
 
   getAuthor = async () => {
     const authorID = this.props.match.params.authorID;
+    console.log("Author ID", authorID);
     this.setState({ loading: true });
     try {
       const res = await instance.get(`/api/authors/${authorID}`);
